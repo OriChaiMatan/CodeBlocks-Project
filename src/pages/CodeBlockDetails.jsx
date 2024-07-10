@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router"
 
 import { codeblockService } from "../services/codeblock.service"
+import { CodeEditor } from "../cmps/CodeEditor"
 
 export function CodeBlockDetails() {
     const [codeblock, setCodeblock] = useState(null)
@@ -27,6 +28,7 @@ export function CodeBlockDetails() {
     return (
         <div>
             <h1>{codeblock.title}</h1>
+            <CodeEditor code={codeblock.code} />
         </div>
     )
 }
