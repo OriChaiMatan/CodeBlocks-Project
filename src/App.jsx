@@ -8,7 +8,7 @@ export function App() {
       <div>
         <Routes>
           <Route path="/" element={<CodeBlockIndex />} />
-          <Route path="/codeblock/:id" element={<CodeBlockDetails />} />
+          <Route path="/codeblock/:codeblockId" element={<CodeBlockDetails />} />
         </Routes>
       </div>
     </Router>
