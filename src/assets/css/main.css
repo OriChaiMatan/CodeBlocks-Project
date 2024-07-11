@@ -3,6 +3,7 @@
 
 /* Pages */
 @import "./pages/index.css";
+@import "./pages/details.css";
 
 /* Components */
 @import "./cmps/index/codeblock-list.css";

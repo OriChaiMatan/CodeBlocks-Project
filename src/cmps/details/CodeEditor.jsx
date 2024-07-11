@@ -1,7 +1,7 @@
 import React from 'react'
 import Editor from '@monaco-editor/react'
 
-export function CodeEditor({ code, onCodeChange, role }) {
+export function CodeEditor({ code }) {
     return (
         <Editor
             className='code-editor'
@@ -9,8 +9,6 @@ export function CodeEditor({ code, onCodeChange, role }) {
             value={code}
             theme="vs-dark"
             minimap={{ enabled: false }}
-            onChange={onCodeChange}
-            options={{ readOnly: role === 'Mentor' }}
         />
-    );
+    )
 }

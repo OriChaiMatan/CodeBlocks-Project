@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router"
 
 import { codeblockService } from "../services/codeblock.service"
-import { CodeEditor } from "../cmps/CodeEditor"
+import { CodeEditor } from "../cmps/details/CodeEditor"
 
 export function CodeBlockDetails() {
     const [codeblock, setCodeblock] = useState(null)
@@ -26,8 +26,8 @@ export function CodeBlockDetails() {
     
     if (!codeblock) return <div>Loading..</div>
     return (
-        <div>
-            <h1>{codeblock.title}</h1>
+        <div className="details">
+            <h1 className="details-title">{codeblock.title}</h1>
             <CodeEditor code={codeblock.code} />
         </div>
     )

@@ -1,0 +1,12 @@
+.details {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.details-title{
+    font-size: 3rem;
+}
