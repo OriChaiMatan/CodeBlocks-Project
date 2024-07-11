@@ -1,6 +1,6 @@
 import { codeblockService } from "../services/codeblock.service"
 import { useState, useEffect } from "react"
-import { CodeBlockList } from "../cmps/CodeBlockList"
+import { CodeBlockList } from "../cmps/index/CodeBlockList"
 
 export function CodeBlockIndex() {
     const [codeBlocks, setCodeBlocks] = useState(null)
@@ -21,11 +21,8 @@ export function CodeBlockIndex() {
     if (!codeBlocks) return <div>Loading..</div>
     return (
         <div>
+            <h1>Choose code block</h1>
             <CodeBlockList codeBlocks={codeBlocks} />
-            {/* <h1>Choose code block</h1>
-            <Link to={`/codeblock`}>
-                <button>here</button>
-            </Link> */}
         </div>
     )
 }
