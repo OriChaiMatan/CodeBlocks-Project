@@ -1,12 +1,15 @@
-import { Link } from "react-router-dom"
+import { Link, useMatch } from "react-router-dom"
 
 export function AppHeader() {
+    const isCodePage = useMatch('/codeblock/:codeblockId')
 
     return (
         <header className='header'>
-            <Link to={'/'} className='header-title'>
-                CODING APP
-            </Link>
+            {isCodePage && (
+                <Link to={'/'} className='header-title'>
+                    CODING APP
+                </Link>
+            )}
         </header>
     )
 }
