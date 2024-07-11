@@ -7,4 +7,5 @@
 /* Components */
 @import "./cmps/index/codeblock-list.css";
 @import "./cmps/index/codeblock-preview.css";
-@import "./cmps/code-editor";
+@import "./cmps/app-header.css";
+@import "./cmps/details/code-editor.css";

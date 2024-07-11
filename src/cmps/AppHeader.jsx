@@ -7,7 +7,7 @@ export function AppHeader() {
         <header className='header'>
             {isCodePage && (
                 <Link to={'/'} className='header-title'>
-                    CODING APP
+                    CodingApp
                 </Link>
             )}
         </header>
