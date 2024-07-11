@@ -2,7 +2,9 @@
 @import "basics";
 
 /* Pages */
-
+@import "./pages/index.css";
 
 /* Components */
+@import "./cmps/index/codeblock-list.css";
+@import "./cmps/index/codeblock-preview.css";
 @import "./cmps/code-editor";

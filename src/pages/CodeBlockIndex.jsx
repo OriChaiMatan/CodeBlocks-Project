@@ -20,8 +20,8 @@ export function CodeBlockIndex() {
 
     if (!codeBlocks) return <div>Loading..</div>
     return (
-        <div>
-            <h1>Choose code block</h1>
+        <div className="index">
+            <h1 className="title">Choose code block</h1>
             <CodeBlockList codeBlocks={codeBlocks} />
         </div>
     )

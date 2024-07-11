@@ -1,0 +1,22 @@
+.codeblock-preview {
+    background-color: #3b82f6;
+    font-weight: 600;
+    min-width: 18rem;
+    padding: 1rem 0rem;
+    border-radius: 9px;
+    font-size: 1.6rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.codeblock-preview p {
+    color: #fafafa;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.codeblock-preview a {
+    text-decoration: none; /* Remove underline from the link */
+}

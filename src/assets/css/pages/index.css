@@ -1,0 +1,13 @@
+.index{
+    margin-top: 12.8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.title{
+    font-size: 3rem;
+}

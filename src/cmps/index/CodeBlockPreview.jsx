@@ -2,9 +2,9 @@ import { Link } from "react-router-dom"
 
 export function CodeBlockPreview({ codeBlock }) {
     return (
-        <div>
+        <div className="codeblock-preview">
             <Link to={`/codeblock/${codeBlock._id}`}>
-                <h1>{codeBlock.title}</h1>
+                <p>{codeBlock.title}</p>
             </Link>
         </div>
     )
