@@ -20,3 +20,13 @@
 .codeblock-preview a {
     text-decoration: none; /* Remove underline from the link */
 }
+
+/* Hover Mode*/
+.codeblock-preview:hover {
+    background-color: #8aafff; 
+    transform: scale(1.15); 
+}
+
+.codeblock-preview:hover p {
+    color: #3f3f3f; 
+}
