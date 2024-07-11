@@ -11,3 +11,11 @@
 .title{
     font-size: 3rem;
 }
+
+@media only screen and (max-width: 768px) {
+    .index{
+      padding: 0.5rem;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+  }
