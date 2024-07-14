@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router"
 
-import { codeblockService } from "../services/codeblock.service_local"
+import { codeblockService } from "../services/codeblock.service"
 import { CodeEditor } from "../cmps/details/CodeEditor"
 
 export function CodeBlockDetails() {
