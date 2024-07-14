@@ -1,10 +1,11 @@
 import Axios from 'axios'
 
+// const BASE_URL = 'http://localhost:3030/api/codeblock/'
+const BASE_URL = (process.env.NODE_ENV === 'production') ? '/api/codeblock/': 'http://localhost:3030/api/codeblock/'
+
 var axios = Axios.create({
     withCredentials: true
 })
-
-const BASE_URL = 'http://localhost:3030/api/codeblock/'
 
 export const codeblockService = {
     query,
