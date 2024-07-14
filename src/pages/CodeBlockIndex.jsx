@@ -1,4 +1,4 @@
-import { codeblockService } from "../services/codeblock.service"
+import { codeblockService } from "../services/codeblock.service_local"
 import { useState, useEffect } from "react"
 import { CodeBlockList } from "../cmps/index/CodeBlockList"
 
