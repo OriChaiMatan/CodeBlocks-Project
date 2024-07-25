@@ -9,10 +9,15 @@ import { useCodeblockSocket } from "../hooks/useCodeBlockSocket"
 
 
 import { CodeEditor } from "../cmps/details/CodeEditor"
+import { SolutionBtn } from "../cmps/details/SolutionBtn"
 import { RedirectModal } from "../cmps/details/RedirectModal"
+import { SolutionModal } from "../cmps/details/SolutionModal"
+import { Smiley } from "../cmps/details/Smiley"
 
 export function CodeBlockDetails() {
     const [codeblock, setCodeblock] = useState(null)
+    const [showSmiley, setShowSmiley] = useState(false)
+    const [showModal, setShowModal] = useState(false)
     const params = useParams()
     const navigate = useNavigate()
 
@@ -30,6 +35,21 @@ export function CodeBlockDetails() {
             socketService.off(SOCKET_EVENT_CODE_UPDATE, handleCodeUpdate)
         }
     }, [params.codeblockId])
+
+    useEffect(() => {
+        // Event listener to remove smiley on document click
+        document.addEventListener('click', removeSmiley)
+
+        return () => {
+            document.removeEventListener('click', removeSmiley)
+        }
+    }, [])
+
+    useEffect(() => {
+        if (codeblock && codeblock.code === codeblock.solution) {
+            setShowSmiley(true)
+        }
+    }, [codeblock])
 
     async function loadCodeblock() {
         try {
@@ -52,6 +72,10 @@ export function CodeBlockDetails() {
         navigate('/')
     }
 
+    function removeSmiley() {
+        setShowSmiley(false)
+    }
+
 
     if (!codeblock) return <div>Loading..</div>
     return (
@@ -64,6 +88,17 @@ export function CodeBlockDetails() {
             <CodeEditor code={codeblock.code}
                 onCodeChange={handleCodeChange}
                 role={userRole} />
+
+            <SolutionBtn onClick={() => setShowModal(true)} />
+
+            {showSmiley && <Smiley />}
+
+            {showModal && (
+                <SolutionModal
+                    solution={codeblock.solution}
+                    onClose={() => setShowModal(false)}
+                />
+            )}
 
             {showRedirectModal && (
                 <RedirectModal onClose={handleCloseRedirectModal} />

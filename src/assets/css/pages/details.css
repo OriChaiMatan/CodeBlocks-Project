@@ -1,20 +1,44 @@
 .details {
-    padding: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
 }
 
-.details-title{
-    font-size: 3rem;
+.details-title {
+  font-size: 3rem;
 }
+
+.button-container {
+  justify-self: end;
+  align-items: center;
+}
+
+.solution-button {
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.solution-button:hover {
+  background-color: #8aafff;
+  transform: scale(1.15);
+}
+
+
 
 @media only screen and (max-width: 768px) {
-    .details{
-      padding: 0.5rem;
-      margin-top: 1rem;
-      font-size: 1.5rem;
-    }
+  .details {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
   }
+}
